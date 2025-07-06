@@ -44,6 +44,25 @@ Execute the main example:
 python claude_api.py
 ```
 
+## Testing
+
+Run the test suite:
+```bash
+python -m unittest test_claude_api.py
+```
+
+Or run with verbose output:
+```bash
+python -m unittest test_claude_api.py -v
+```
+
+The test suite includes:
+- API key validation tests
+- Successful API call simulation
+- Parameter validation
+- Error handling verification
+- Environment variable loading tests
+
 ## API Models
 
 The example uses the latest Claude model:
