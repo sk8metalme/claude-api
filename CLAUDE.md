@@ -1,5 +1,7 @@
 # CLAUDE.md
 
+[![CI](https://github.com/arigatatsuya/claude-api/actions/workflows/ci.yml/badge.svg)](https://github.com/arigatatsuya/claude-api/actions/workflows/ci.yml)
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Project Overview
@@ -14,6 +16,11 @@ This is a Python project that demonstrates how to use the Anthropic Claude API. 
 
 ### Dependencies
 Install required Python packages:
+```bash
+pip install -r requirements.txt
+```
+
+Or install manually:
 ```bash
 pip install anthropic python-dotenv
 ```
@@ -62,6 +69,23 @@ The test suite includes:
 - Parameter validation
 - Error handling verification
 - Environment variable loading tests
+
+## Continuous Integration
+
+This project uses GitHub Actions for CI/CD with the following features:
+
+### CI Pipeline
+- **Multi-version testing**: Tests run on Python 3.8, 3.9, 3.10, 3.11, and 3.12
+- **Automated testing**: Unit tests are executed on every push and pull request
+- **Code quality**: Linting with flake8 and code formatting checks with black
+- **Dependency caching**: Pip dependencies are cached for faster builds
+
+### Workflow Triggers
+- Push to `main` and `develop` branches
+- Pull requests to `main` branch
+
+### CI Status
+The CI status badge at the top of this document shows the current build status.
 
 ## API Models
 
